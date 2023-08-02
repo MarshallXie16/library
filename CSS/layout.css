@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 5px var(--book-border-color);
+
+}
+
+.books-grid {
+    width: 80%;
+    height: 100%;
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(400px, 1.5fr));
+    row-gap: 6rem;
+    column-gap: 4rem;
+}
+
+
+.book {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--container-color);
+    box-shadow: 0px 0px 10px var(--book-border-color);
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: translateY(-5%);
+    box-shadow: 0px 0px 10px var(--book-border-color--hover);
+}
+
+
+#book1 .image {
+    height: 70%;
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px solid var(--book-border-color);
+    border-radius: 1rem;
+    background-image: url('/images/test-book1.jpg');
+    background-size: cover;
+}
+
+.book-content {
+    height: 30%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3, h5, p {
+    margin: 0;
+}
+h3 {
+    margin-top: 0.7rem;
+    margin-bottom: 0.3rem;
+}
+h5 {
+    margin-bottom: 1rem;
+}
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 30%;
+    height: auto;
+    padding: 0.3rem;
+    color: var(--primary-color);
+    background-color: var(--text-color-dark);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    color: var(--text-color-dark);
+    background-color: var(--primary-color);
+}
+
+
+.delete-button {
+    color: red;
+    border-color: red;
+}
+.delete-button:hover {
+    color: var(--text-color-dark);
+    background-color: red;
+}
+
+/* add book button */
+.add-book {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--container-color);
+    box-shadow: 0px 0px 10px var(--book-border-color);
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+}
+
+/* hover animation for add-book button */
+.add-book:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 10px var(--container-color);
+}
+
+/* styling + icon */
+.add-book i {
+    font-size: 3rem;
+    color: grey;
+    transition: font-size 0.5s, transform 1s;
+}
+
+/* hover animation for + icon */
+.add-book:hover i {
+    font-size: 5rem;
+    transform: rotate(360deg);
+}
+
+
+h1 {
+    font-size: 3rem;
+}
